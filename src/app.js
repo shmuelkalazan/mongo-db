@@ -1,8 +1,10 @@
 const exp = require('express')
 const dotenv = require('dotenv')
+const { connectToMongo } = require('./config/dbConfig')
 
 const app = exp()
 dotenv.config()
+connectToMongo()
 
 app.use(exp.json())
 app.use('auth',require('./routes/authRouter'))
