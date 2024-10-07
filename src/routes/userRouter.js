@@ -1,9 +1,28 @@
-const router = require('express').Router()
+const reguster = async (req ,res) => {
+    try {
+        
+    } catch (error) {
+        
+    }
+}
 
-router.post('/register',()=>{})
+const getProfile = async (req ,res) => {
+    try {
+        
+    } catch (error) {
+        
+    }
+}
 
-router.get('/profile',()=>{})
-
-router.patch('/settings',()=>{})
-
-module.exports = router;
+const setSetings = async (req ,res) => {
+    try {
+        
+    } catch (error) {
+        
+    }
+}
+module.exports = {
+    reguster,
+    getProfile,
+    setSetings
+}
