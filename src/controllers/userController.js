@@ -1,9 +1,14 @@
+const { createUser } = require("../services/userService")
 
-const reguster = async (req ,res) => {
+const register = async (req ,res) => {
     try {
-        
-    } catch (error) {
-        
+        await createUser(req.body)
+        res.status(201).json({
+            msg:"user created"
+        })
+    } catch (err) {
+        res.status(400).json(err)
+
     }
 }
 
@@ -23,7 +28,7 @@ const setSetings = async (req ,res) => {
     }
 }
 module.exports = {
-    reguster,
+    register,
     getProfile,
     setSetings
 }

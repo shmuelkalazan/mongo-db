@@ -1,8 +1,8 @@
-const { reguster, getProfile, setSetings } = require('../controllers/userController');
+const { register, getProfile, setSetings } = require('../controllers/userController');
 
 const router = require('express').Router()
 
-router.post('/register',reguster)
+router.post('/register',register)
 
 router.get('/profile',getProfile)
 
