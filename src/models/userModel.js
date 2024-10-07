@@ -11,14 +11,23 @@ const userSchema = new mongoose.Schema({
         required:[true,"password mast be provaided"]
     },
     role:{
-        tupe:String,
+        type:String,
         enum:['soldier','commander'],
         required:[true,"please provaide a role"]
+    },
+    area:{
+        type:String,
+        enum:['center','north',"south","west","east"],
+        required:[true,"please provaide a area"]
+    },
+    units:{
+        type:[Number],
+        required:[true,"please specify at last one unit"]
     }
 })
 
 const UserModel = mongoose.model('user',userSchema)
-
 module.exports = {
-    UserModel
-}
+    UserModel,
+    userSchema
+};
