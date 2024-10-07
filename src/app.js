@@ -7,7 +7,7 @@ dotenv.config()
 app.use(exp.json())
 app.use('auth',require('./routes/authRouter'))
 app.use('user',require('./routes/userRouter'))
-app.use('green_eye',require('./routes/green_eye'))
+app.use('green_eye',require('./routes/greenEyeRouter'))
 
 const port = process.env.PORT 
 app.listen(port ,() => console.log(`server run on port ${port}`))
