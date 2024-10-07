@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken")
 
-const onlyCommanders = async () => {
+const onlyCommanders = async (req,res,next) => {
     try {
         const token = req.cookies.token
         const userData = await jwt.verify(token,process.env.TKEN_SECERT)

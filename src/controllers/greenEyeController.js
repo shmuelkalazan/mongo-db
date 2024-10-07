@@ -1,6 +1,7 @@
 const createPoll = async (req ,res) => {
     try {
-        
+        console.log("the poll stil at the biulding")
+        res.send("the poll stil at the biulding")
     } catch (error) {
         
     }
