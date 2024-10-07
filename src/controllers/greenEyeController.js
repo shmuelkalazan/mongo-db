@@ -43,5 +43,6 @@ module.exports = {
     createPoll,
     getNotifications,
     reply,
+    getPollById,
     deletePoll
 }

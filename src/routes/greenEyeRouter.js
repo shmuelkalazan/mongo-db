@@ -1,13 +1,15 @@
+const { createPoll, reply, getNotifications, getPollById, deletePoll } = require('../controllers/greenEyeController')
+
 const router = require('express').Router()
 
-router.post('/',()=>{})
+router.post('/',createPoll)
 
-router.get('/my',()=>{})
+router.get('/my',getNotifications)
 
-router.get('/:id',()=>{})
+router.get('/:id',getPollById)
 
-router.post('/reply',()=>{})
+router.post('/reply',reply)
 
-router.delete('/:id',()=>{})
+router.delete('/:id',deletePoll)
 
 module.exports = router;
